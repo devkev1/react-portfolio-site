@@ -19,7 +19,7 @@ function Intro() {
           </div>
         </div>
         <p className="i-desc">
-          Description goes here.
+          Hi there! Thanks for visiting my page! I'm Kevin and I'm a front-end developer from Northern New Jersey. Scroll down this page to find out more about me!
         </p>
       </div>
     </div>
