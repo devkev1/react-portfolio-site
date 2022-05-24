@@ -4,14 +4,23 @@ import Phone from "../../img/phone.png";
 import Email from "../../img/email.png";
 import LinkedIn from "../../img/linkedin.png";
 import GitHub from "../../img/github.png";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
 
 const Contact = () => {
-    const forRef = useRef();
+    const formRef = useRef();
+    const [done, setDone] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        emailjs.sendForm('service_8ldgwyj', 'template_v3uqote', formRef.current, 'XJv20Oh3DqJfSi5NN')
+        .then((result) => {
+            console.log(result.text);
+            setDone(true);
+        }, (error) => {
+            console.log(error.text);
+        });
     }
 
     return (
@@ -40,12 +49,13 @@ const Contact = () => {
                 </div>
                 <div className="c-right">
                     <p className="c-desc"><b>Get in touch</b></p>
-                    <form ref={forRef} onSubmit={handleSubmit}>
+                    <form ref={formRef} onSubmit={handleSubmit}>
                         <input type="text" placeholder="Name" name="user_name" />
                         <input type="text" placeholder="Subject" name="user_subject" />
                         <input type="text" placeholder="Email" name="user_email" />
                         <textarea rows="5" placeholder="Message" name="message" />
-                        <button>Submit</button>
+                        <button>Submit</button> 
+                        {done && "Message sent."}
                     </form>
                 </div>
             </div>
