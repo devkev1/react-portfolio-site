@@ -7,7 +7,6 @@ import GitHub from "../../img/github.png";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-
 const Contact = () => {
     const formRef = useRef();
     const [done, setDone] = useState(false);
@@ -40,10 +39,18 @@ const Contact = () => {
                             <img src={Email} alt="" className="c-icon" /> kevingywong@gmail.com
                         </div>
                         <div className="c-info-item">
-                            <img src={LinkedIn} alt="" className="c-icon" /> https://www.linkedin.com/in/devkev1
+                              <a href="https://www.linkedin.com/in/devkev1"
+                target="_blank"
+                rel="noreferrer"
+              >  <img src={LinkedIn} alt="" className="c-icon" /> https://www.linkedin.com/in/devkev1
+    </a> 
                         </div>
                         <div className="c-info-item">
-                            <img src={GitHub} alt="" className="c-icon" /> https://github.com/devkev1
+                        <a href="https://github.com/devkev1"
+                target="_blank"
+                rel="noreferrer"
+              >  <img src={GitHub} alt="" className="c-icon" /> https://github.com/devkev1
+    </a> 
                         </div>
                     </div>
                 </div>
@@ -55,7 +62,7 @@ const Contact = () => {
                         <input type="text" placeholder="Email" name="user_email" />
                         <textarea rows="5" placeholder="Message" name="message" />
                         <button>Submit</button> 
-                        {done && "Message sent."}
+                        {" "}{done && "Message sent."}
                     </form>
                 </div>
             </div>
