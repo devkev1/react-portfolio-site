@@ -1,5 +1,6 @@
 import WeatherApp from "./img/weather_app.jpg";
 import RecipeFinder from "./img/recipe_finder.jpg";
+import AppTracker from "./img/application_tracker.jpg";
 
 export const projects = [
     {
@@ -12,4 +13,9 @@ export const projects = [
         img: RecipeFinder,
         link: "https://romantic-kare-aca670.netlify.app/",
     },
+    {
+        id: 3,
+        img: AppTracker,
+        link: "https://fancy-pastelito-31a01e.netlify.app/",
+    }
 ];
