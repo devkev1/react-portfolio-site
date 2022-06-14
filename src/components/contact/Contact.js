@@ -4,12 +4,17 @@ import Phone from "../../img/phone.png";
 import Email from "../../img/email.png";
 import LinkedIn from "../../img/linkedin.png";
 import GitHub from "../../img/github.png";
-import { useRef, useState } from "react";
+import { useRef, useState, useContext } from "react";
 import emailjs from "@emailjs/browser";
+import { ThemeContext } from "../../context";
+import resume from "./Kevin Wong - Resume.pdf";
+
 
 const Contact = () => {
     const formRef = useRef();
     const [done, setDone] = useState(false);
+    const theme = useContext(ThemeContext);
+    const darkMode = theme.state.darkMode;
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,28 +33,66 @@ const Contact = () => {
             <div className="c-wrapper">
                 <div className="c-left">
                     <div className="c-title">Let's connect</div>
-                    <div className="c-info">
+                    <div>
+
+
                         <div className="c-info-item">
-                            <img src={Resume} alt="" className="c-icon" /> Download Resume
+                           
+                            <a href={resume}
+                target="_blank"
+                rel="noreferrer" style={{ color: darkMode ? "white" : "black" }}> 
+                     <div className="c-icon-container">
+                            <img src={Resume} alt="" className="c-icon" />
                         </div>
+                             Download Resume</a>
+                        </div>
+
+
+
+
+
                         <div className="c-info-item">
-                            <img src={Phone} alt="" className="c-icon" /> 551-250-1724
+                        <div className="c-icon-container">
+                        <img src={Phone} alt="" className="c-icon" />
+                            </div>
+                             551-250-1724
                         </div>
+
+
+
+
+
                         <div className="c-info-item">
-                            <img src={Email} alt="" className="c-icon" /> kevingywong@gmail.com
+                        <div className="c-icon-container">
+                        <img src={Email} alt="" className="c-icon" /> 
+                            </div> 
+                            kevingywong@gmail.com
                         </div>
+
+
+                        
                         <div className="c-info-item">
                               <a href="https://www.linkedin.com/in/devkev1"
                 target="_blank"
                 rel="noreferrer"
-              >  <img src={LinkedIn} alt="" className="c-icon" /> https://www.linkedin.com/in/devkev1
-    </a> 
+                style={{ color: darkMode ? "white" : "black" }}
+              >  <img src={LinkedIn} alt="" style={{ marginRight: 20, width: 38, height: 38 }} /> https://www.linkedin.com/in/devkev1
+    </a>   
                         </div>
+
+
+
                         <div className="c-info-item">
                         <a href="https://github.com/devkev1"
                 target="_blank"
                 rel="noreferrer"
-              >  <img src={GitHub} alt="" className="c-icon" /> https://github.com/devkev1
+                style={{ color: darkMode ? "white" : "black" }}
+              > 
+                        <div className="c-icon-container">
+                        <img src={GitHub} alt="" className="c-icon" />
+
+                        </div>
+                         https://github.com/devkev1
     </a> 
                         </div>
                     </div>

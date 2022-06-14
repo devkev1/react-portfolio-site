@@ -16,7 +16,6 @@
 
 .i-left-wrapper {
     padding: 50px;
-    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -37,25 +36,28 @@
 }
 
 .i-title-wrapper {
-    height: 100%;
-    animation: move 10s ease-in-out infinite alternate;
+    animation: move 20s ease-in-out infinite alternate;
 }
 
 @keyframes move {
-    25% {
+    20% {
         transform: translateY(-50px);
     }
 
-    50% {
+    40% {
         transform: translateY(-100px);
     }
 
-    75% {
+    60% {
         transform: translateY(-150px);
     }
 
-    100% {
+    80% {
         transform: translateY(-200px);
+    }
+
+    100% {
+        transform: translateY(-250px);
     }
 }
 
@@ -89,5 +91,15 @@
 
     .i-desc {
         display: none;
+    }
+
+    .i-title-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .i-name {
+        margin-bottom: 9px;
+        margin-top: 0;
     }
 }

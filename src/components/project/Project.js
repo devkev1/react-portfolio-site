@@ -1,16 +1,13 @@
 import "./project.css";
 
-const Project = ({ img, link }) => {
+const Project = ({ img, link, description }) => {
     return (
         <div className="p">
-            <div className="p-browser">
-                <div className="p-circle"></div>
-                <div className="p-circle"></div>
-                <div className="p-circle"></div>
-            </div>
             <a href={link} target="_blank" rel="noreferrer">
-               <img src={img} alt="" className="p-img" />
+            <div className="p-img" style={{ backgroundImage: `url(${img})` }}>
+            </div>
             </a>
+            <p>{description}</p>
         </div>
     )
 }
