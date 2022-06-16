@@ -24,7 +24,11 @@
         height: 20vh;
     }
 
+    .p-description {
+        display: none;
+    }
+
     .p-img {
-        height: 175px;
+        height: 138px;
     }
 }
