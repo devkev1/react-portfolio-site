@@ -7,7 +7,7 @@ const Project = ({ img, link, description }) => {
             <div className="p-img" style={{ backgroundImage: `url(${img})` }}>
             </div>
             </a>
-            <p>{description}</p>
+            <p className="p-description">{description}</p>
         </div>
     )
 }

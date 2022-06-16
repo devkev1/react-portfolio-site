@@ -4,7 +4,11 @@
     border: 2px solid rgb(243, 242, 242);
     border-radius: 10px 10px 0px 0px;
     overflow: hidden;
+}
 
+.p-description {
+    margin-left: 10px;
+    margin-right: 12px;
 }
 
 .p-img {
@@ -18,5 +22,9 @@
     .p {
         width: 40%;
         height: 20vh;
+    }
+
+    .p-img {
+        height: 175px;
     }
 }
