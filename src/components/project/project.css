@@ -18,6 +18,11 @@
     background-position: center;
 }
 
+.p-github {
+    margin-right: -370px;
+    margin-top: -6px;
+}
+
 @media screen and (max-width: 480px) {
     .p {
         width: 40%;
@@ -30,5 +35,11 @@
 
     .p-img {
         height: 138px;
+    }
+
+    .p-github {
+        margin-right: -158px;
+        margin-top: 3px;
+        width: 35px;
     }
 }
