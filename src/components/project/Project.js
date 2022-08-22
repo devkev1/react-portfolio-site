@@ -1,5 +1,6 @@
 import "./project.css";
 import GitHub from "../../img/github.png";
+import DarkModeGitHub from "../../img/darkmodegithub.png";
 import { useContext } from "react";
 import { ThemeContext } from "../../context";
 
@@ -23,7 +24,11 @@ const Project = ({ img, link, description, github }) => {
           rel="noreferrer"
           className="p-github-link"
         >
-          <img src={darkMode ? GitHub : GitHub} alt="" className="p-github" />
+          <img
+            src={darkMode ? DarkModeGitHub : GitHub}
+            alt=""
+            className="p-github"
+          />
         </a>
       </div>
     </div>
